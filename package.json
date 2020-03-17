@@ -1,0 +1,29 @@
+{
+  "name": "roster",
+  "version": "1.0.0",
+  "description": "Create dynamic web roster based on user input.",
+  "main": "app.js",
+  "directories": {
+    "lib": "lib",
+    "test": "test"
+  },
+  "scripts": {
+    "test": "jest --verbose test/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tkennedy118/roster.git"
+  },
+  "author": "Tyler Kennedy",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tkennedy118/roster/issues"
+  },
+  "homepage": "https://github.com/tkennedy118/roster#readme",
+  "dependencies": {
+    "inquirer": "^7.1.0"
+  },
+  "devDependencies": {
+    "jest": "^25.1.0"
+  }
+}
