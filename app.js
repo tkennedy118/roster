@@ -34,8 +34,15 @@ const questions = [
         choices: ["Manager", "Engineer", "Intern"]
     }];
 
-// Write code to use inquirer to gather information about the development team member,
-// and to create objects for each team member (using the correct classes as blueprints!)
+/*************************************** FUNCTIONS ***************************************/
+
+const init = async function() {
+
+    await createTeam();
+    
+    const html = render(team);
+    fs.writeFileSync(outputPath, html);
+}
 
 // FUNCTION: calls menu() and returns menu choice, calls addEmployee() and returns employee object,
 //           adds employee object to 'team' array.
@@ -123,12 +130,6 @@ const addEmployee = async function() {
     return employee;
 }
 
-createTeam();
-
-// After the user has input all empmloyees desired, call the 'render' function (required
-// above) and pass in an array containing all employee objects; the 'render' function will
-// generate and return a block of HTML including templated divs for each employee!
-
 // After you have your html, you're now ready to create an HTML file using the HTML
 // returned from the 'render' function. Now write it to a file name 'team.html' in the
 // 'output' folder. You can use the variable 'outputPath' above to target this location.
@@ -143,3 +144,6 @@ createTeam();
 // for further information. Be sure to test out each class and verify it generates an 
 // object with the correct structure and methods. This structure will be crucial in order
 // for the provided 'render' function to work!
+
+/************************************* FUNCTION CALLS *************************************/
+init();
