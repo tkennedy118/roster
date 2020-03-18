@@ -36,6 +36,7 @@ const questions = [
 
 /*************************************** FUNCTIONS ***************************************/
 
+// FUNCTION: run main logic
 const init = async function() {
 
     await createTeam();
@@ -123,27 +124,12 @@ const addEmployee = async function() {
                             message: "School: "
                         }
                     );
-                employee = new Engineer(name, id, email, school);
+                employee = new Intern(name, id, email, school);
             }
         });
     
     return employee;
 }
-
-// After you have your html, you're now ready to create an HTML file using the HTML
-// returned from the 'render' function. Now write it to a file name 'team.html' in the
-// 'output' folder. You can use the variable 'outputPath' above to target this location.
-// HINT: you may need to check if the 'output' folder exists and create it if it does not.
-
-// HINT: each employee type (manager, engineer, or intern) has slightly different 
-// information; write your code to ask different questions via inquirer depending on 
-// employee type.
-
-// HINT: make sure to build out your classes first! Remember that your Manager, Engineer,
-// and Intern classes should all exten from a class named Employee; see the directions
-// for further information. Be sure to test out each class and verify it generates an 
-// object with the correct structure and methods. This structure will be crucial in order
-// for the provided 'render' function to work!
 
 /************************************* FUNCTION CALLS *************************************/
 init();
